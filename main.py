@@ -15,7 +15,7 @@ Min_range = -((File_Width // 2) - 1)
 
 points = []
 # x^2 + y^2 = 631,04 + 198,4 * cos(7,2t) отсюда выразим y через x
-for t in np.range(0, maxt + 0.1, 0.001):
+for t in np.arange(0, maxt + 0.1, 0.05):
     x = round(24.8 * (math.cos(t) + math.cos(6.2 * t) / 6.2))
     y = round(((631.04 + 198.4 * math.cos(7.2*t) - x ** 2)**0.5).real)
     if [x, y] not in points:
